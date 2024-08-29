@@ -6,27 +6,21 @@
   <h1>Guess The Khasri</h1>
   <p>Im thinking of a number between 1 to 100. Can you guess it?</p>
   <input type ="number" placeholder ="Insert Number" id="guess"></input>
-  <button onlick="checkGuest()">Khasri</button>
+  <button onclick="checkGuest()">Khasri</button>
 <p id="result"></p>
 </body>
   <script>
     let secretNumber = Math.floor(Math.random() * 100) + 1;
-
-    function checkGuess(){
-
-  let guess = document.getElementById("guess").value;
-  let resultElement = document.getElementById("result");
-
-  if(guess==secretNumber)
-    {
-    result.textcontent="Congraz,Betul!!! khasri SUKAAA ANAA"
-    }
-    else lf (guess > secretNumber){
-    resultElement.textContent = "Nombor Besar , nombor lebih kecil dari tekaan nombor"
-    }
-    else{
-    resultElement.textcontent = "Nombor Kecil,nombor lebih besar dari tekaan nombor"
-    }
+    function checkGuest(){
+      let guess = document.getElementById("guess").value;
+      let resultElement = document.getElementById("result");
+      if(guess == secretNumber){
+        resultElement.textContent = "Congraz,Betul!!! khasri SUKAAA ANAA";
+      } else if (guess > secretNumber){
+        resultElement.textContent = "Nombor Besar , nombor lebih kecil dari tekaan nombor";
+      }else{
+        resultElement.textContent = "Nombor Kecil,nombor lebih besar dari tekaan nombor";
+      }
     }
     
     
